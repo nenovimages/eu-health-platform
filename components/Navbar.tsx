@@ -13,6 +13,7 @@ export default function Navbar() {
       gap: "20px"
     }}>
       <Link href="/">Home</Link>
+      <Link href="/dashboard">Dashboard</Link>
       <Link href="/profile">Profile</Link>
     </nav>
   );

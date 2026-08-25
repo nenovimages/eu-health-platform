@@ -1,9 +1,10 @@
 interface CardProps {
-  title?: string;
-  children: React.ReactNode;
+  title: string;
+  description?: string;
+  children?: React.ReactNode;
 }
 
-export default function Card({ title, children }: CardProps) {
+export default function Card({ title, description, children }: CardProps) {
   return (
     <div
       style={{
@@ -15,11 +16,10 @@ export default function Card({ title, children }: CardProps) {
         marginBottom: "20px"
       }}
     >
-      {title && (
-        <h2 style={{ marginBottom: "12px", fontSize: "20px" }}>
-          {title}
-        </h2>
-      )}
+      <h2 style={{ marginBottom: "12px", fontSize: "20px" }}>
+        {title}
+      </h2>
+      {description && <p>{description}</p>}
       {children}
     </div>
   );
